@@ -1,0 +1,26 @@
+server:
+  port: 8083
+  compression.enabled: true
+  compression.mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+  compression.min-response-size: 2048
+
+spring:
+  jpa.hibernate.ddl-auto: update
+  jpa.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  main:
+    banner-mode: off
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/sample_project
+    username: root
+    password: 351057
+    initialization-mode: never
+
+rabbitmq:
+  username: guest
+  password: guest
+  ip: 127.0.0.1
+  port: 5672
+  queue_name: nurbol.queue
+  exchange: nurbol.exchange
+  routingkey: nurbol.routingkey
